@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+/* grid layout */
+
 #gridContainer{
     display: flex;
     flex-direction: column;
@@ -20,21 +22,43 @@
     border: 0.1px solid gray;
 }
 
-.gridY:hover{
-    background-color: tomato;
-}
-
-.changeColor{
-    background-color: tomato;
-}
-
 #container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* new class */
+
+.changeColor{
+    background-color: tomato;
+}
+
+/* layout */
+
+#bottomContainer{
+    display: flex;
+    gap: 100px;
+}
+
+#buttonsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* ui */
+
 #header{
     font-size: 2em;
 }
+
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+#eraseButton:
 
