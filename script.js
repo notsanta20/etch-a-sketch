@@ -1,11 +1,13 @@
 //etch-a-sketch
 
 const gridContainer = document.querySelector(`#gridContainer`);
+const colorPicker = document.querySelector(`#colorPicker`);
 const gridButton = document.querySelector(`#gridButton`);
 const eraseButton = document.querySelector(`#eraseButton`);
 const resetButton = document.querySelector(`#resetButton`);
 const rainbowButton = document.querySelector(`#rainbowButton`);
 let gridNumber = 16;
+let userColor = '';
 
 gridButton.addEventListener(`click`, ()=>{
     const userInput = prompt(`Enter a Value between 2 - 64`);
@@ -19,6 +21,11 @@ gridButton.addEventListener(`click`, ()=>{
         gridDisplay();
     }
 });
+
+colorPicker.addEventListener("input", function(){
+    userColor = colorPicker.value;
+    });
+
 function gridDisplay(){
     for (let i = 0; i < gridNumber; i++) {
         const gridX = document.createElement(`div`);
@@ -30,6 +37,11 @@ function gridDisplay(){
             gridX.appendChild(gridY);
             gridY.addEventListener(`mouseenter`, ()=>{
                 gridY.classList.add(`changeColor`);
+            });
+            colorPicker.addEventListener(`click`, ()=>{
+                gridY.addEventListener(`mouseenter`, ()=>{
+                    gridY.style.backgroundColor = userColor;
+                });
             });
             resetButton.addEventListener(`click`, ()=>{
                 gridY.style.backgroundColor = `#000000`;
