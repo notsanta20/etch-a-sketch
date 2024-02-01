@@ -1,7 +1,7 @@
 //etch-a-sketch
 
 const gridContainer = document.querySelector(`#gridContainer`);
-const gridNumber = 6;
+const gridNumber = 16;
 
 for (let i = 0; i < gridNumber; i++) {
     const gridX = document.createElement(`div`);
@@ -11,6 +11,9 @@ for (let i = 0; i < gridNumber; i++) {
         const gridY = document.createElement(`div`);
         gridY.classList.add(`gridY`);
         gridX.appendChild(gridY);
+        gridY.addEventListener(`mouseenter`, ()=>{
+            gridY.classList.add(`changeColor`);
+        });
     }
+    
 }
-
