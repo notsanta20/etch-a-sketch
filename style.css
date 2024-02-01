@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+#gridContainer{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.gridX{
+    display: flex;
+    flex-grow: 1;
+    width: 400px;
+}
+
+.gridY{
+    flex-grow: 1;
+    background-color: black;
+    border: 0.1px solid gray;
+}
+
+.gridY:hover{
+    background-color: tomato;
+}
+
+.changeColor{
+    background-color: tomato;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header{
+    font-size: 2em;
+}
+
